@@ -71,16 +71,22 @@ library(gridExtra)
 library(lattice)
 library(caret)
 library(kableExtra)
+library(knitr)
+# library(knitr)
+library(kableExtra)
+Customers <- read.csv("data/olist_customers_dataset.csv", header = TRUE)
+Geolocation <- read.csv("data/olist_geolocation_dataset.csv", header = TRUE)
+Items <- read.csv("data/olist_order_items_dataset.csv", header = TRUE)
+Payments <- read.csv("data/olist_order_payments_dataset.csv", header = TRUE)
+Reviews <- read.csv("data/olist_order_reviews_dataset.csv", header = TRUE)
+Orders <- read.csv("data/olist_orders_dataset.csv", header = TRUE)
+Products <- read.csv("data/olist_products_dataset.csv", header = TRUE)
+Sellers <- read.csv("data/olist_sellers_dataset.csv", header = TRUE)
+Pdttrans <- read.csv("data/product_category_name_translation.csv", header = TRUE)
 
-Customers <- read.csv("../input/olist_customers_dataset.csv", header = TRUE)
-Geolocation <- read.csv("../input/olist_geolocation_dataset.csv", header = TRUE)
-Items <- read.csv("../input/olist_order_items_dataset.csv", header = TRUE)
-Payments <- read.csv("../input/olist_order_payments_dataset.csv", header = TRUE)
-Reviews <- read.csv("../input/olist_order_reviews_dataset.csv", header = TRUE)
-Orders <- read.csv("../input/olist_orders_dataset.csv", header = TRUE)
-Products <- read.csv("../input/olist_products_dataset.csv", header = TRUE)
-Sellers <- read.csv("../input/olist_sellers_dataset.csv", header = TRUE)
-Pdttrans <- read.csv("../input/product_category_name_translation.csv", header = TRUE)
+# read the head of the csv file
+# kable(head(Orders), format = "markdown",caption = "Orders dataset")
+
 ```
 
 ## Principal Dataset
@@ -502,8 +508,7 @@ kable(w1, digits = 2, caption = "Factors for k-means clustering & their values")
 ### Cluster 2
 
 ```{r, warning=FALSE, message=FALSE, echo=FALSE}
-
-w2 <- w %>% filter(Cluster == "Cluster2")
+# w2 <- w %>% filter(Cluster == "Cluster2")
 kable(w2, digits = 2, caption = "Factors for k-means clustering & their values") %>% kable_styling(c("striped","bordered", "condensed"), full_width = F)%>% add_header_above(c(" "=2,"Factor 01" = 2, "Factor 02" = 3, "Factor 03" = 1)) %>% group_rows(index = c("Year 2016" = 1, "Year 2017" = 4, "Year 2018" = 3)) %>% footnote(general = "   ", alphabet = c("Orders delivered"),number = c("Only MEDIANs per quarter per factor are stated"), alphabet_title = "Order Status ::", number_title = "Values ::",footnote_as_chunk = T)
 ```
 
