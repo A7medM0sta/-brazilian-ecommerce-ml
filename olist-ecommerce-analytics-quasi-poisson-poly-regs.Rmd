@@ -74,19 +74,19 @@ library(kableExtra)
 library(knitr)
 # library(knitr)
 library(kableExtra)
-Customers <- read.csv("data/olist_customers_dataset.csv", header = TRUE)
-Geolocation <- read.csv("data/olist_geolocation_dataset.csv", header = TRUE)
-Items <- read.csv("data/olist_order_items_dataset.csv", header = TRUE)
-Payments <- read.csv("data/olist_order_payments_dataset.csv", header = TRUE)
-Reviews <- read.csv("data/olist_order_reviews_dataset.csv", header = TRUE)
-Orders <- read.csv("data/olist_orders_dataset.csv", header = TRUE)
-Products <- read.csv("data/olist_products_dataset.csv", header = TRUE)
-Sellers <- read.csv("data/olist_sellers_dataset.csv", header = TRUE)
-Pdttrans <- read.csv("data/product_category_name_translation.csv", header = TRUE)
+Customers <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_customers_dataset.csv", header = TRUE)
+Geolocation <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_geolocation_dataset.csv", header = TRUE)
+Items <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_order_items_dataset.csv", header = TRUE)
+Payments <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_order_payments_dataset.csv", header = TRUE)
+Reviews <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_order_reviews_dataset.csv", header = TRUE)
+Orders <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_order_items_dataset.csv", header = TRUE)
+Products <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_products_dataset.csv", header = TRUE)
+Sellers <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/olist_sellers_dataset.csv", header = TRUE)
+Pdttrans <- read.csv("/Users/ahmedmostafa/PycharmProjects/brazilian-ecommerce-ml/data/product_category_name_translation.csv", header = TRUE)
 
 # read the head of the csv file
 # kable(head(Orders), format = "markdown",caption = "Orders dataset")
-
+head(Reviews)
 ```
 
 ## Principal Dataset
